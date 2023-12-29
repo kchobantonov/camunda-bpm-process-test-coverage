@@ -12,13 +12,13 @@
         <meta name="author" content="Camunda OSS Developers">
       
       
-        <link rel="canonical" href="https://camunda-community-hub.github.io/camunda-process-test-coverage/snapshot/user-guide/index.html">
+        <link rel="canonical" href="https://camunda-community-hub.github.io/camunda-process-test-coverage/snapshot/user-guide/sonarqube.html">
       
       
-        <link rel="prev" href="../getting-started.html">
+        <link rel="prev" href="configuration.html">
       
       
-        <link rel="next" href="configuration.html">
+        <link rel="next" href="../developer-guide/contribution.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Overview - Camunda Process Test Coverage</title>
+        <title>Sonarqube - Camunda Process Test Coverage</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration" class="md-skip">
+        <a href="#sonarqube-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Sonarqube
             
           </span>
         </div>
@@ -425,28 +425,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -455,42 +437,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugins
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -521,10 +467,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="sonarqube.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sonarqube
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sonarqube.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -533,6 +497,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sonarqube-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sonarqube plugin
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -652,17 +643,26 @@
   
 
 
-  <h1>Overview</h1>
+  <h1>Sonarqube</h1>
 
-<p>The user guide consists of several sections.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="configuration.html">Configure report directory</a></li>
-</ul>
-<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="sonarqube.html">Sonarqube plugin</a></li>
-</ul>
+<h2 id="sonarqube-plugin">Sonarqube plugin<a class="headerlink" href="#sonarqube-plugin" title="Permanent link">#</a></h2>
+<p>A plugin for sonarqube is provided with the artifact</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>org.camunda.community.process_test_coverage<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>sonar-camunda-process-test-coverage-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>${camunda-process-test-coverage.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<p>To install this plugin into Sonarqube please have a look at:
+https://docs.sonarsource.com/sonarqube/latest/setup-and-upgrade/install-a-plugin/
+Currently we don't provide the plugin via the marketplace, so it has to be manually installed.</p>
+<p>The plugin can be configured via sonar.process-test-coverage.jsonReportPaths property.
+This can be used to define comma separated glob patterns to find the json report files of the coverage calculation.</p>
+<p>The plugin adds a coverage measure for each found BPMN diagram and also an accumulated one on project level.</p>
+<p><img alt="Processes coverage" src="../assets/img/sonarqube_coverage_processes.png" /></p>
+<p><img alt="Project coverage" src="../assets/img/sonarqube_coverage_project.png" /></p>
+<p>Also a HTML for the project is added as a project report page.</p>
+<p><img alt="Project report page" src="../assets/img/sonarqube_coverage_report_page.png" /></p>
 
 
 
